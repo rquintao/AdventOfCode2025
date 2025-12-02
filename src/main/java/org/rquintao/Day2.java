@@ -62,7 +62,7 @@ public class Day2 {
                     long from = Long.parseLong(rangeComponents[0]);
                     long to = Long.parseLong(rangeComponents[1]);
                     for (long k = from; k <= to; k++) {
-                        List<List<String>> splitNumbers = getSplittedNumbers(k);
+                        List<List<String>> splitNumbers = getSplitNumbers(k);
                         for (int iter = 1; iter < splitNumbers.size(); iter++) {
                             String comparator = splitNumbers.get(iter).get(0);
                             if (splitNumbers.get(iter).stream().allMatch(number -> number.equals(comparator))) {
@@ -82,7 +82,7 @@ public class Day2 {
 
     }
 
-    private static List<List<String>> getSplittedNumbers(long k) {
+    private static List<List<String>> getSplitNumbers(long k) {
         List<List<String>> splittedNumbers = new ArrayList<>();
         String numberAsString = String.valueOf(k);
         int stringLength = numberAsString.length();
