@@ -1,8 +1,8 @@
-import org.rquintao.Day1;
+import org.rquintao.Day2;
 
 
 static void main() throws IOException {
-    Day1.second();
+    Day2.second();
 }
 
 
